@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <% include ../partials/head.ejs %>
+    <title>Contact Me!</title>
+  </head>
+  <body>
+    <h1>Tell me what you need done...</h1>
+    <form action="/contacts" method="POST">
+      <h4>Name: <input type="text" name="Name" placeholder="Name" /></h4>
+      <br />
+      <h4>
+        Phone:
+        <input type="number" name="Phonenumber" placeholder="Phone Number" />
+      </h4>
+      <br />
+      <h4>E-mail: <input type="text" name="E-mail" placeholder="E-mail" /></h4>
+      <br />
+      <br />
+      <textarea required placeholder="Type message here"></textarea>
+      <input type="submit" value="Submit" />
+    </form>
+    <a href="/">-> Home</a>
+  </body>
+</html>

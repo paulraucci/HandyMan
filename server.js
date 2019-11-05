@@ -22,7 +22,7 @@ app.use("/reviews", reviewsController);
 
 //Index
 app.get("/", (req, res) => {
-  res.send("index from server");
+  res.render("index.ejs");
 });
 
 //nodemon console.log

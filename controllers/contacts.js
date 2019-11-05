@@ -7,7 +7,7 @@ const Contact = require("../models/contacts.js");
 
 //send to contact page
 router.get("/", (req, res) => {
-  res.send("contact page");
+  res.render("contacts/new.ejs");
 });
 //export Router
 module.exports = router;
