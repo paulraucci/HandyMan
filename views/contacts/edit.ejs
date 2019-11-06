@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <%include ../partials/head.ejs%>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="containerEdit">
+      <h1>Edit Contact Page</h1>
+      <form action="/contacts/<%=Contact.id%>?_method=PUT" method="POST">
+        <br />
+        Name:
+        <input type="text" name="name" value="<%=Contact.name%>" /><br /><br />
+        Phone:
+        <input type="number" name="phone" value="<%=Contact.phone%>" />
+        <br /><br />
+        E-mail:
+        <input
+          type="text"
+          name="email"
+          value="<%=Contact.email%>"
+        /><br /><br />
+        Message:
+        <input type="text" name="message" value="<%=Contact.message%>" /><br />
+        <input class="edit" type="submit" name="" value="Submit Changes" />
+      </form>
+    </div>
+  </body>
+</html>

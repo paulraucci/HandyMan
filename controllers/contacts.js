@@ -15,8 +15,25 @@ router.post("/", (req, res) => {
     }
   });
 });
+//show
+router.get("/show", (req, res) => {
+  Contact.find({}, (error, allContact) => {
+    res.render("contacts/show.ejs", {
+      Contact: allContact
+    });
+  });
+});
 
-//
+//Edit
+router.get("/:id/edit", (req, res) => {
+  Contact.findById(req.params.id, (error, foundContact) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.render("edit.ejs", { Contact: foundContact });
+    }
+  });
+});
 
 //send to contact page
 router.get("/", (req, res) => {
