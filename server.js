@@ -1,7 +1,7 @@
 //Dependencies
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
+const mongoose = require("mongoose").set("debug", true);
 const methodOverride = require("method-override");
 
 //Port
@@ -32,7 +32,8 @@ app.listen(port, () => {
 
 //Mongoose database
 mongoose.connect("mongodb://localhost:27017/handyman", {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 mongoose.connection.once("open", () => {
