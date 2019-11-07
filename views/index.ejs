@@ -17,6 +17,10 @@
 
     <br />
     <% include ./partials/foot.ejs%>
+    <h1>
+      <%if (currentUser) {%> Welcome <%=currentUser.name.toUpperCase()%>!
+      <%}else{%><%}%>
+    </h1>
     <!--  -->
     <%if (currentUser) {%>
     <a href="/users/new">Create New User</a>
@@ -25,8 +29,11 @@
         Contacts
       </button></a
     >
+    <form action="/sessions?_method=DELETE" method="POST">
+      <input type="submit" value="Logout" />
+    </form>
     <%} else{%>
-    <a href="/users/login">Log In</a>
+    <a href="/sessions/new">Log In</a>
     <%}%>
   </body>
 </html>

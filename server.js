@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose").set("debug", true);
 const methodOverride = require("method-override");
+const sessions = require("express-session");
 
 //Port
 const port = 3000;
@@ -11,6 +12,13 @@ const port = 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
+app.use(
+  sessions({
+    secret: "handyman",
+    resave: false,
+    saveUninitialized: false
+  })
+);
 
 //controller to contacts.js
 const contactsController = require("./controllers/contacts.js");
@@ -24,10 +32,14 @@ app.use("/reviews", reviewsController);
 const usersController = require("./controllers/users.js");
 app.use("/users", usersController);
 
+//controller to sessions.js
+const sessionsController = require("./controllers/sessions.js");
+app.use("/sessions", sessionsController);
+
 //Index
 app.get("/", (req, res) => {
   res.render("index.ejs", {
-    currentUser: req.body.currentUser
+    currentUser: req.session.currentUser
   });
 });
 
