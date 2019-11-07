@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require("mongoose").set("debug", true);
 const methodOverride = require("method-override");
 const sessions = require("express-session");
-const mongoURI = process.env.MONGODB_URI;
+// const mongoURI = process.env.MONGODB_URI;
 
 //Port
 const port = 3000;
