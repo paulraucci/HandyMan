@@ -30,3 +30,13 @@ footer {
   text-align: center;
   height: 2.5rem;
 }
+
+/* secret access */
+.secret {
+  border: 2px solid black;
+  height: 20vh;
+  width: 20vw;
+  position: absolute;
+  margin-left: 79vw;
+  top: 5px;
+}

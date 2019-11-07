@@ -17,23 +17,25 @@
 
     <br />
     <% include ./partials/foot.ejs%>
-    <h1>
+
+    <h1 class="hiddenWelcome">
       <%if (currentUser) {%> Welcome <%=currentUser.name.toUpperCase()%>!
       <%}else{%><%}%>
     </h1>
     <!--  -->
     <%if (currentUser) {%>
-    <a href="/users/new">Create New User</a>
-    <a href="/contacts/show"
-      ><button type="button" name="button" class="see-contacts three columns">
-        Contacts
-      </button></a
-    >
-    <form action="/sessions?_method=DELETE" method="POST">
-      <input type="submit" value="Logout" />
-    </form>
-    <%} else{%>
+    <div class="secret">
+      <a href="/users/new">Create New User</a>
+      <a href="/contacts/show"
+        ><button type="button" name="button" class="see-contacts three columns">
+          Contacts
+        </button></a
+      >
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Logout" />
+      </form>
+      <%} else{%> <%}%>
+    </div>
     <a href="/sessions/new">Log In</a>
-    <%}%>
   </body>
 </html>
