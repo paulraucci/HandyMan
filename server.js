@@ -4,10 +4,11 @@ const app = express();
 const mongoose = require("mongoose").set("debug", true);
 const methodOverride = require("method-override");
 const sessions = require("express-session");
-// const mongoURI = process.env.MONGODB_URI;
+const mongoURI =
+  process.env.MONGODB_URI || "mongodb://localhost:27017/handyman";
 
 //Port
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -50,7 +51,7 @@ app.listen(port, () => {
 });
 
 //Mongoose database
-mongoose.connect("mongodb://localhost:27017/handyman", {
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

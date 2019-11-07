@@ -11,7 +11,7 @@ router.get("/new", (req, res) => {
 //create new
 router.post("/", (req, res) => {
   User.findOne({ name: req.body.name }, (err, foundUser) => {
-    if (foundUser.password) {
+    if ((req.body.password, foundUser.password)) {
       req.session.currentUser = foundUser;
       res.redirect("/");
     } else {
