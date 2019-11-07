@@ -1,0 +1,32 @@
+/* All files */
+.body {
+  height: 100vh;
+  width: 100vw;
+}
+/* Nav */
+.col-md-12 {
+  text-align: center;
+  position: absolute;
+  top: 5px;
+}
+.home {
+  color: green;
+  text-decoration: none !important;
+  text-align: center;
+}
+/* Logo */
+.logo {
+  height: 20vh;
+  width: 15vw;
+  display: flex;
+  margin-right: 0px;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 2.5rem;
+}

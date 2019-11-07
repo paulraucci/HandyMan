@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <% include ../partials/head.ejs %>
-    <title>Contact Me!</title>
+
+    <title></title>
   </head>
   <body>
-    <%include ../partials/img.ejs%> <%include ../partials/nav.ejs%>
+    <% include ../partials/head.ejs %>
+    <!--  -->
+    <%include ../partials/img.ejs%>
+    <!--  -->
+    <%include ../partials/nav.ejs%>
     <h1>Tell me what you need done...</h1>
     <form action="/contacts" method="POST">
       <h4>Name: <input type="text" name="name" placeholder="Name" /></h4>
@@ -28,6 +32,6 @@
       ></textarea>
       <input type="submit" value="Submit" />
     </form>
-    <a href="/">-> Home</a>
+    <%include ../partials/foot.ejs%>
   </body>
 </html>

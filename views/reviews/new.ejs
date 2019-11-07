@@ -4,28 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <% include ../partials/head.ejs %>
-    <title>Contact Me!</title>
+
+    <title></title>
   </head>
   <body>
-    <%include ../partials/img.ejs%> <%include ../partials/nav.ejs%>
-    <h1>Please leave a review</h1>
-    <form action="/reviews" method="POST">
-      <h4>Name: <input type="text" name="name" placeholder="Name" /></h4>
-      <br />
-      <h4>
-        Type of work to be done:
-        <input type="text" name="jobtype" placeholder="" />
-      </h4>
-      <br />
-      <br />
-      <textarea
-        required
-        name="comment"
-        placeholder="Type message here"
-      ></textarea>
-      <input type="submit" value="Submit" />
-    </form>
-    <a href="/">-> Home</a>
+    <% include ../partials/head.ejs %>
+    <div class="reviewContainer">
+      <%include ../partials/img.ejs%> <%include ../partials/nav.ejs%>
+      <h1>Please leave a review</h1>
+      <form action="/reviews" method="POST">
+        <h4>Name: <input type="text" name="name" placeholder="Name" /></h4>
+        <br />
+        <h4>
+          Type of work to be done:
+          <input type="text" name="jobtype" placeholder="" />
+        </h4>
+        <br />
+        <br />
+        <textarea
+          required
+          name="comment"
+          placeholder="Type message here"
+        ></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <%include ../partials/foot.ejs%>
   </body>
 </html>

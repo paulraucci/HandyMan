@@ -20,9 +20,15 @@ app.use("/contacts", contactsController);
 const reviewsController = require("./controllers/reviews.js");
 app.use("/reviews", reviewsController);
 
+//controller to users.js
+const usersController = require("./controllers/users.js");
+app.use("/users", usersController);
+
 //Index
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", {
+    currentUser: req.body.currentUser
+  });
 });
 
 //nodemon console.log

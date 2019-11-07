@@ -30,7 +30,34 @@ router.get("/:id/edit", (req, res) => {
     if (error) {
       console.log(error);
     } else {
-      res.render("edit.ejs", { Contact: foundContact });
+      res.render("contacts/edit.ejs", { Contact: foundContact });
+    }
+  });
+});
+
+//Put Route
+router.put("/:id", (req, res) => {
+  Contact.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (error, updatedProduct) => {
+      if (error) {
+        console.log(error);
+      } else {
+        res.redirect("/");
+      }
+    }
+  );
+});
+
+//Delete
+router.delete("/:id", (req, res) => {
+  Contact.findByIdAndDelete(req.params.id, (error, deletedContact) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.redirect("/contacts/show");
     }
   });
 });

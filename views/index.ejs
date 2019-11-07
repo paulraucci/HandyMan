@@ -7,11 +7,26 @@
     <title>Document</title>
   </head>
   <body>
-    <%include ./partials/img.ejs%> <% include ./partials/head.ejs %> <% include
-    ./partials/nav.ejs %>
+    <% include ./partials/head.ejs %>
+    <!--  -->
+    <%include ./partials/img.ejs%>
+    <!--  -->
+    <% include ./partials/nav.ejs %>
+    <br />
     <br />
 
     <br />
     <% include ./partials/foot.ejs%>
+    <!--  -->
+    <%if (currentUser) {%>
+    <a href="/users/new">Create New User</a>
+    <a href="/contacts/show"
+      ><button type="button" name="button" class="see-contacts three columns">
+        Contacts
+      </button></a
+    >
+    <%} else{%>
+    <a href="/users/login">Log In</a>
+    <%}%>
   </body>
 </html>
