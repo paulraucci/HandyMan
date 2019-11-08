@@ -13,27 +13,61 @@
     <%include ../partials/img.ejs%>
     <!--  -->
     <%include ../partials/nav.ejs%>
-
-    <div class="containerEdit">
+    <!--  -->
       <h1>Edit Contact Page</h1>
-      <form action="/contacts/<%=Contact.id%>?_method=PUT" method="POST">
-        <br />
-        Name:
-        <input type="text" name="name" value="<%=Contact.name%>" /><br /><br />
-        Phone:
-        <input type="number" name="phone" value="<%=Contact.phone%>" />
-        <br /><br />
-        E-mail:
-        <input
-          type="text"
-          name="email"
-          value="<%=Contact.email%>"
-        /><br /><br />
-        Message:
-        <input type="text" name="message" value="<%=Contact.message%>" /><br />
-        <input class="edit" type="submit" name="" value="Submit Changes" />
-      </form>
-    </div>
+    <!--  -->
+    <!--  -->
+    <form action="/contacts/<%=Contact.id%>?_method=PUT" method="POST">
+      <div class="form-group">
+        <label for="name"></label>
+        <div class="col-5">
+          <input
+            name="name"
+            type="text"
+            value="<%=Contact.name%>"
+            class="form-control"
+            placeholder="Enter name"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone"></label>
+        <div class="col-5">
+          <input
+            name="phone"
+            type="number"
+            value="<%=Contact.phone%>"
+            class="form-control"
+            placeholder="Phone Number"
+          />
+        </div>
+      </div>
+        <div class="form-group">
+            <label for="email"></label>
+            <div class="col-5">
+              <input
+                name="email"
+                type="text"
+                value="<%=Contact.email%>"
+                class="form-control"
+                placeholder="E-mail"
+              />
+              
+            </div>
+      </div>
+      <div class="form-group">
+          <label for="message"></label>
+          <div class="col-5">
+          <textarea required name='message' value="<%=Contact.message%>"  class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message"></textarea>
+         
+          </div>
+        </div>
+      <div class="col-2">
+        <button type="submit" value="Submit" class="btn btn-success">
+          Submit Changes
+        </button>
+      </div>
     <%include ../partials/foot.ejs%>
   </body>
 </html>

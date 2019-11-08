@@ -12,22 +12,50 @@
     <div class="reviewContainer">
       <%include ../partials/img.ejs%> <%include ../partials/nav.ejs%>
       <h1>Please leave a review</h1>
-      <form action="/reviews" method="POST">
-        <h4>Name: <input type="text" name="name" placeholder="Name" /></h4>
-        <br />
-        <h4>
-          Type of work to be done:
-          <input type="text" name="jobtype" placeholder="" />
-        </h4>
-        <br />
-        <br />
-        <textarea
-          required
-          name="comment"
-          placeholder="Type message here"
-        ></textarea>
-        <input type="submit" value="Submit" />
-      </form>
+      <!--  -->
+       <!--  -->
+       <form action="/reviews" method="POST">
+        <div class="form-group">
+          <label for="name"></label>
+          <div class="col-5">
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              placeholder="Enter name"
+            />
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="job"></label>
+          <div class="col-5">
+            <input
+              name="jobtype"
+              type="text"
+              class="form-control"
+             
+              placeholder="Type of Job"
+            />
+          </div>
+        </div>
+          <div class="form-group">
+              <label for="comment"></label>
+              <div class="col-5">
+                <input
+                  name="comment"
+                  type="text"
+                  class="form-control"
+                 
+                  placeholder="Leave a short message!"
+                />
+              </div>
+        </div>
+        <div class="col-2">
+          <button type="submit" value="Submit" class="btn btn-success">
+            Submit Review
+          </button>
+        </div>
     </div>
     <%include ../partials/foot.ejs%>
   </body>
