@@ -14,15 +14,12 @@
     <% include ./partials/nav.ejs %>
     <!--  -->
     <!--  -->
-    <h4 class="hiddenWelcome" style="text-align:center;">
-      <%if (currentUser) {%> Welcome <%=currentUser.name.toUpperCase()%>!
-      <%}else{%><%}%>
-    </h4>
     <!--  -->
     <!--  -->
     <!--  -->
-    <div class="reviewCards">
-      <h3>Reviews</h3>
+
+    <div class="allCards">
+      <h3 style="text-align:center;">Reviews</h3>
       <%for (let i = 0; i < Reviews.length; i++){%>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -34,7 +31,10 @@
       <%}%>
     </div>
     <!--  -->
+
+    <!--  -->
     <div class="lawnArticle">
+      <h3>Property Services</h3>
       <image
         class="lawnImage"
         src="https://www.lovethegarden.com/sites/default/files/styles/og_image/public/content/articles/UK_advice-lawn-care-tools-essential-tools-lawn-maintenance_main.jpg?itok=raEDePA3"
@@ -43,23 +43,51 @@
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
         consectetur atque rerum ullam, vero debitis, provident dolorem, quo
         voluptatum veniam cum praesentium placeat necessitatibus enim
+        voluptatibus rem unde dolores distinctio. Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Dolore consectetur atque rerum ullam, vero
+        debitis, provident dolorem, quo voluptatum veniam cum praesentium
+        placeat necessitatibus enim voluptatibus rem unde dolores distinctio.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+        consectetur atque rerum ullam, vero debitis, provident dolorem, quo
+        voluptatum veniam cum praesentium placeat necessitatibus enim
         voluptatibus rem unde dolores distinctio.
       </p>
     </div>
     <!--  -->
-    <br />
-
-    <br />
-
+    <div class="jumbotron">
+      <h1 class="display-4">Seasonal Services</h1>
+      <p class="lead">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci at
+        aperiam earum, quia aliquam delectus magni inventore id voluptates
+        incidunt temporibus cumque asperiores repellendus quas reprehenderit
+        facere aspernatur maiores quod!
+      </p>
+      <hr class="my-4" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates odit
+        dolore maxime minima. Iste libero hic architecto eos odio reiciendis
+        culpa assumenda dolores officia eius, omnis repellendus quos praesentium
+        dolore.
+      </p>
+      <p class="lead">
+        <a href="/contacts"
+          ><button type="button" name="button" class="btn btn-success">
+            Schedule Today!
+          </button></a
+        >
+      </p>
+    </div>
     <!--  -->
     <%if (currentUser) {%>
     <div class="secret">
-      <a href="/users/new">Create New User</a>
+        <img src="/Images/Ben/ben.jpg" style='height:100px; width: 100px; border-radius: 50px;'></img>
+      <a href="/users/new">Create New User</a>&nbsp;&nbsp;
       <a href="/contacts/show"
         ><button type="button" name="button" class="see-contacts three columns">
           Contacts
         </button></a
       >
+      &nbsp; &nbsp;
       <form action="/sessions?_method=DELETE" method="POST">
         <input type="submit" value="Logout" />
       </form>

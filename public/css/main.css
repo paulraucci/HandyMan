@@ -3,9 +3,8 @@
 }
 /* All files */
 .body {
-  height: 100vh;
-  width: 100vw;
-  font-family: "Vidaloka", serif !important;
+  height: auto;
+  width: auto;
 }
 /* Nav */
 .col-md-12 {
@@ -24,6 +23,7 @@
   width: 15vw;
   display: flex;
   margin-right: 0px;
+  z-index: 1;
 }
 
 /* Footer */
@@ -34,11 +34,10 @@ footer {
   text-align: center;
   height: 2.5rem;
 }
-
+/* ====================INDEX==================== */
 /* secret access */
 .secret {
   display: flex;
-  border: 2px solid black;
   height: 10vh;
   width: 20vw;
   position: absolute;
@@ -55,30 +54,36 @@ footer {
   height: 70px;
   width: 70px;
   position: relative;
-  bottom: 0px;
+  bottom: 0vh;
 }
 /* lawn Article */
 .lawnArticle {
   height: 60vh;
   width: 50vw;
+  margin-top: -350px;
+  margin-left: 3vw;
 }
-
 .lawnImage {
   height: 30vh;
   width: 50vw;
   border-radius: 7px;
 }
 /* all Reviews */
-.reviewCards {
+.allCards {
+  position: relative;
+  margin-left: 60vw;
   margin-bottom: 1vh;
-  height: 20vh;
-  width: 40vw;
-  border: 2px black solid;
+  height: 40vh;
+  width: 35vw;
+  border: 5px green solid;
+  border-top-style: none;
+  border-bottom-style: none;
+  border-radius: 7px;
   overflow-y: scroll;
 }
 .card {
   margin-bottom: 1vh;
-  margin-left: 8vw;
+  margin-left: 2vw;
   height: 10vh;
   width: 30vw !important;
   overflow-y: scroll;
