@@ -1,7 +1,11 @@
+* {
+  font-family: "Vidaloka", serif;
+}
 /* All files */
 .body {
   height: 100vh;
   width: 100vw;
+  font-family: "Vidaloka", serif !important;
 }
 /* Nav */
 .col-md-12 {
@@ -33,10 +37,23 @@ footer {
 
 /* secret access */
 .secret {
+  display: flex;
   border: 2px solid black;
-  height: 20vh;
+  height: 10vh;
   width: 20vw;
   position: absolute;
   margin-left: 79vw;
   top: 5px;
+}
+.hiddenWelcome {
+  position: absolute;
+  top: 11vh;
+  left: 45vw;
+}
+/* sign in */
+.signIn {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  bottom: 0px;
 }

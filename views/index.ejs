@@ -12,16 +12,16 @@
     <%include ./partials/img.ejs%>
     <!--  -->
     <% include ./partials/nav.ejs %>
-    <br />
+    <!--  -->
+    <h4 class="hiddenWelcome" style="text-align:center;">
+      <%if (currentUser) {%> Welcome <%=currentUser.name.toUpperCase()%>!
+      <%}else{%><%}%>
+    </h4>
+    <!--  -->
     <br />
 
     <br />
     <% include ./partials/foot.ejs%>
-
-    <h1 class="hiddenWelcome">
-      <%if (currentUser) {%> Welcome <%=currentUser.name.toUpperCase()%>!
-      <%}else{%><%}%>
-    </h1>
     <!--  -->
     <%if (currentUser) {%>
     <div class="secret">
@@ -36,6 +36,8 @@
       </form>
       <%} else{%> <%}%>
     </div>
-    <a href="/sessions/new">Log In</a>
+    <a href="/sessions/new"
+      ><img class="signIn" src="/Images/lock/lock.png"
+    /></a>
   </body>
 </html>
