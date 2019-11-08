@@ -28,7 +28,7 @@
 
 /* Footer */
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -54,9 +54,32 @@ footer {
 .signIn {
   height: 70px;
   width: 70px;
-  position: absolute;
+  position: relative;
   bottom: 0px;
 }
-/* image carousel */
-#indexCarousel {
+/* lawn Article */
+.lawnArticle {
+  height: 60vh;
+  width: 50vw;
+}
+
+.lawnImage {
+  height: 30vh;
+  width: 50vw;
+  border-radius: 7px;
+}
+/* all Reviews */
+.reviewCards {
+  margin-bottom: 1vh;
+  height: 20vh;
+  width: 40vw;
+  border: 2px black solid;
+  overflow-y: scroll;
+}
+.card {
+  margin-bottom: 1vh;
+  margin-left: 8vw;
+  height: 10vh;
+  width: 30vw !important;
+  overflow-y: scroll;
 }

@@ -6,6 +6,8 @@ const methodOverride = require("method-override");
 const sessions = require("express-session");
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost:27017/handyman";
+//
+const Reviews = require("./models/reviews.js");
 
 //Port
 const port = process.env.PORT || 3000;
@@ -40,8 +42,11 @@ app.use("/sessions", sessionsController);
 
 //Index
 app.get("/", (req, res) => {
-  res.render("index.ejs", {
-    currentUser: req.session.currentUser
+  Reviews.find({}, (error, allReviews) => {
+    res.render("index.ejs", {
+      currentUser: req.session.currentUser,
+      Reviews: allReviews
+    });
   });
 });
 
