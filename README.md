@@ -3,7 +3,7 @@
   Node.js with ejs workflow to create simple website for handyman/side business. 
   Multiple forms pages to request contact and also leave reviews. 
 ## Aplication URL
-..*[PVD Property Rehab](https://pvdrehab.herokuapp.com/)
+..* [PVD Property Rehab](https://pvdrehab.herokuapp.com/)
 ## Technologies
     Node.js
     Mongoose
